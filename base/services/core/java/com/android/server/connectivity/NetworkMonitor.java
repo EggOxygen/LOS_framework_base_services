@@ -270,8 +270,12 @@ public class NetworkMonitor extends StateMachine {
 
         mLingerDelayMs = SystemProperties.getInt(LINGER_DELAY_PROPERTY, DEFAULT_LINGER_DELAY_MS);
 
-        mIsCaptivePortalCheckEnabled = Settings.Global.getInt(mContext.getContentResolver(),
-                Settings.Global.CAPTIVE_PORTAL_DETECTION_ENABLED, 1) == 1;
+//   I Realy Don`t Need This
+//   Thanks Android
+//        mIsCaptivePortalCheckEnabled = Settings.Global.getInt(mContext.getContentResolver(),
+//                Settings.Global.CAPTIVE_PORTAL_DETECTION_ENABLED, 1) == 1;
+//   Let`s Stop This Function
+          mIsCaptivePortalCheckEnabled = false;
 
         start();
     }
